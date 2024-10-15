@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>سايبر كاريزما يرحب بكم</title>
+    <style>
+        /* تنسيق الصفحة */
+        body {
+            background-color: #222;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        /* تنسيق الأقسام */
+        .section {
+            display: none;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            width: 60%;
+        }
+        .active {
+            display: block;
+        }
+        /* تنسيق القائمة */
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        /* تنسيق العناوين */
+        h1, h2, h3 {
+            margin: 10px 0;
+            color: #ffcc00;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            // إخفاء جميع الأقسام
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            // إظهار القسم المطلوب
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <h1>سايبر كاريزما يرحب بكم</h1>
+    <nav>
+        <a href="#" onclick="showSection('home')">الرئيسية</a>
+        <a href="#" onclick="showSection('computers')">أجهزة الكمبيوتر</a>
+        <a href="#" onclick="showSection('computerPrices')">أسعار أجهزة الكمبيوتر</a>
+        <a href="#" onclick="showSection('playstation')">أجهزة البلايستيشن</a>
+        <a href="#" onclick="showSection('playstationPrices')">أسعار البلايستيشن</a>
+        <a href="#" onclick="showSection('location')">العنوان</a>
+    </nav>
+
+    <!-- الصفحة الرئيسية -->
+    <div id="home" class="section active">
+        <h2>مرحباً بكم في سايبر كاريزما</h2>
+        <p>نقدم لكم أفضل تجربة لعب وأفضل الأسعار.</p>
+    </div>
+
+    <!-- قسم أجهزة الكمبيوتر -->
+    <div id="computers" class="section">
+        <h2>أجهزة الكمبيوتر</h2>
+        <p>يوجد لدينا 8 أجهزة كمبيوتر.</p>
+        <p>لمعرفة سعر الساعة على أجهزة الكمبيوتر اضغط <a href="#" onclick="showSection('computerPrices')">هنا</a>.</p>
+    </div>
+
+    <!-- قسم أسعار أجهزة الكمبيوتر -->
+    <div id="computerPrices" class="section">
+        <h2>أسعار أجهزة الكمبيوتر</h2>
+        <p>الساعة العادية على جهاز الكمبيوتر: 3 جنيهات</p>
+        <p>لكي تلعب إنترنت: الساعة 6 جنيهات</p>
+    </div>
+
+    <!-- قسم أجهزة البلايستيشن -->
+    <div id="playstation" class="section">
+        <h2>أجهزة البلايستيشن</h2>
+        <p>يوجد لدينا ألعاب كثيرة جداً.</p>
+        <p>لمعرفة الأسعار اضغط <a href="#" onclick="showSection('playstationPrices')">هنا</a>.</p>
+    </div>
+
+    <!-- قسم أسعار ألعاب البلايستيشن -->
+    <div id="playstationPrices" class="section">
+        <h2>أسعار ألعاب البلايستيشن</h2>
+        <p>نصف ساعة = 5 جنيهات (GTA5, FIFA)</p>
+        <p>الساعة = 10 جنيهات</p>
+    </div>
+
+    <!-- قسم العنوان -->
+    <div id="location" class="section">
+        <h2>العنوان</h2>
+        <p>المكان: الفهميين شارع النزلة قبل كبري العامية</p>
+        <p>إدارة: مصطفى رمضان وأحمد منصور</p>
+    </div>
+</body>
+</html>
